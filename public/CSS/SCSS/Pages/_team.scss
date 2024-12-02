@@ -1,0 +1,23 @@
+.team-article {
+    margin: $margin-l $margin-l;
+    gap: $gap-l;
+    border: 1px dotted $C01;
+}
+
+.team-article-item:nth-child(even){
+     background-color: $w02;
+}
+
+.team-article-item {
+    grid-template-columns: auto 1fr;
+    padding: $padding-b;
+}
+
+.team-article-item-container-img {
+    margin-right: $margin-m;
+}
+
+.team-article-item-container-text span{
+    display: inline-block;
+    margin-bottom: $margin-m;
+}

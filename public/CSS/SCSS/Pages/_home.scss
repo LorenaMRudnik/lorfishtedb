@@ -1,0 +1,32 @@
+.home-main {
+    margin: $margin-b $margin-l;
+    grid-template-columns: 1fr;
+    gap: $gap-b;
+}
+
+
+
+.home-section {
+    margin: 0 auto;
+}
+
+.home-section h2 {
+    margin-bottom: $margin-b;
+}
+
+
+@media (max-width: 900px){
+    .home-section , .home-main img {
+        max-width: 70ch;
+    }
+}
+.home-section p {
+    max-width: 60ch;
+    text-align: left;
+}
+
+.home-main img {
+    margin: 0 auto;
+    text-align: center;
+    
+}

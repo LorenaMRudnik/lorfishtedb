@@ -1,0 +1,49 @@
+/*MARGINS*/
+$margin-xl: 120px;
+$margin-l: 60px;
+$margin-b: 30px;
+$margin-m: 15px;
+$margin-s: 9px;
+$margin-xs: 6px;
+$margin-xxs: 3px;
+
+
+/* PADDINGS */
+$padding-xl: 60px;
+$padding-l: 45px;
+$padding-b: 30px;
+$padding-m: 15px;
+$padding-s: 9px;
+$padding-xs: 6px;
+$padding-xxs: 6px;
+
+
+/* GAP */
+$gap-l: 60px;
+$gap-b: 30px;
+$gap-m: 15px;
+$gap-s: 9px;
+$gap-xs: 6px;
+
+
+/* BOX-SHADOW*/
+$box-shadow-s: 0px 4px 4px 0px rgba(51, 50, 43, 0.1);
+$box-shadow-m: 0px 4px 4px 0px rgba(51, 50, 43, 0.25);
+$box-shadow-b: 0px 4px 4px 0px rgba(51, 50, 43, 0.4);
+$box-shadow-l: 0px 4px 4px 0px rgba(51, 50, 43, 0.55);
+$box-shadow-xl: 0px 4px 4px 0px rgba(51, 50, 43, 0.7);  
+
+/* BORDER-RADIUS */
+$border-radius: 5px;
+$border-radius-rounded: 90px;
+
+/* CONTAINERS */
+.flexbox {
+    display: flex;
+    flex-flow: row;
+}
+
+.grid {
+    display: grid;
+}
+

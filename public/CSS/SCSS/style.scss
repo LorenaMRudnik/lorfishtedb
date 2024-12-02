@@ -1,0 +1,19 @@
+/* UTILITIES*/
+@import "./Utilities/color";
+@import "./Utilities/typography";
+@import "./Utilities/layout";
+@import "./Utilities/components";
+
+/* GENERAL CONFIGURATIONS*/
+@import "./General/general";
+
+/* HEADER */
+@import "./General/header";
+
+/* PAGES */
+@import "./Pages/home";
+@import "./Pages/results";
+@import "./Pages/search";
+@import "./Pages/team";
+@import "./Pages/blast";
+

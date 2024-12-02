@@ -1,0 +1,17 @@
+{
+    "name": "diego/lorfishtedb",
+    "description": "Desenvolvimento de um banco de dados para armazenar e expor resultados das an\u0000lises de Elementos Transpon\u0000veis (TEs) em amostras de peixes, realizadas por Lorena Rudnik.",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Routes\\": "routes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Diego Araujo Souza",
+            "email": "111664809+d13g025@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

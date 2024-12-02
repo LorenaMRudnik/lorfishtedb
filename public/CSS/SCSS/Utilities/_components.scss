@@ -1,0 +1,62 @@
+.button {
+    display: block;
+    background: $C04;
+    color: $W01;
+    font-weight: $font-weight-bold;
+    font-family: $font-family-2;
+    font-size: $font-size-s;
+    text-transform: uppercase;
+    padding: $padding-xs $padding-b;
+    border: 3px solid $C05;
+    // border: none;
+    box-shadow: $box-shadow-m;
+    border-radius: $border-radius-rounded;
+}
+
+.button:hover {
+    background: $C03;
+    border-color: $C04;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.label {
+    font-family: $font-family-2;
+    font-size: 0.75rem;//15px
+    font-weight: $font-weight-semibold;
+    color: $C08;
+}
+
+.input {
+    border: 1px solid $C02;
+    border-radius: $border-radius;
+    background-color: white;
+    box-shadow: $box-shadow-s;
+}
+
+.input:focus {
+    outline: 1px solid $C01;
+    box-shadow: $box-shadow-m;
+}
+
+option {
+    
+    border: 1px solid $C05;;
+}
+
+option:active {
+    outline: 1px solid $C05;
+}
+
+select {
+    border: 1px solid $C02;
+    color: $C07;
+}
+
+select:focus {
+    outline: 1px solid $C05;
+}
+
+option:hover, select:hover {
+    cursor: pointer;
+}

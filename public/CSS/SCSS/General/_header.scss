@@ -1,0 +1,61 @@
+
+
+
+header ul {
+    justify-content: start;
+    align-items: center;
+    justify-items: center;
+    background-color: $C03;
+    margin-bottom: $margin-s;
+    box-shadow: $box-shadow-l;
+    grid-template-columns: repeat(5, auto);
+    gap: $gap-s;
+}
+
+.nav-list {
+    grid-template-columns: repeat(6, auto);
+}
+
+.nav-list-item a {
+    padding: $padding-s $padding-m;
+    font-size: $font-size-m;
+    font-family: $font-family-2;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-link:hover {
+    text-shadow: 1px 0px 1px white;
+    transition: .15s;
+}
+
+.active-page {
+    text-decoration: underline wavy;
+    color: white;  
+}
+
+#header-logo-title a {
+    font-family: $font-family-2;
+    letter-spacing: 0.25rem;
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+    background-color: $W01;
+    box-shadow: $box-shadow-b;
+}
+
+
+.page-main-title {
+    margin-top: $margin-m;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    padding: $padding-m 0;
+    border-top: 4px solid $C05;
+    border-bottom: 4px solid $C05;
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        grid-template-columns: auto;
+    } 
+}

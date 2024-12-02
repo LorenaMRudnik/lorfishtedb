@@ -1,0 +1,79 @@
+/*COLORS*/
+$C01: #C3EAF1;
+$C02: #94CBD5;
+$C03: #7ABAC5;
+$C04: #67A1AB;
+$C05: #4C8590;
+$C06: #346C76;
+$C07: #1C545E;
+$C08: #0C3C44;
+$C09: #0C2C31;
+$C10: #02181C;
+$C10: #2D595B;
+
+/*BASE COLORS*/
+$W01: #FCFEFF;
+$w02: #f4fbfe;
+$B01: #33322B;
+
+/*GRADIENT COLORS*/
+$G01: linear-gradient(45deg, $C04, $C05);
+$G02: linear-gradient(45deg, #A5EDEE, #a3f1f3);
+$G03: linear-gradient(45deg, #b4f6f8, #b1f8fa);
+
+
+
+/*COLOR CLASSES*/
+.color-c01 {
+    color: $C01;
+}
+.color-c02 {
+    color: $C02;
+}
+.color-c03 {
+    color: $C03;
+}
+.color-c04 {
+    color: $C04;
+}
+.color-c05 {
+    color: $C05;
+}
+.color-c06 {
+    color: $C06;
+}
+// .color-c07 {
+//     color: $C07;
+// }
+// .color-c08 {
+//     color: $C08;
+// }
+// .color-c09 {
+//     color: $C09;
+// }
+// .color-c10 {
+//     color: $C10;
+// }
+// .color-c11 {
+//     color: $C11;
+// }
+// .color-c12 {
+//     color: $C12;
+// }
+// .color-c13 {
+//     color: $C13;
+// }
+// .color-c14 {
+//     color: $C14;
+// }
+// .color-c15 {
+//     color: $C15;
+// }
+
+/*Base color classes*/
+.color-w01 {
+    color: $W01;
+}
+.color-b01 {
+    color: $B01;
+}

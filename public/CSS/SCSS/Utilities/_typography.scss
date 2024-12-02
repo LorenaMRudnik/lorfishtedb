@@ -1,0 +1,152 @@
+/* FONT FAMILY*/
+$font-family: 'Montserrat', sans-serif;
+$font-family-2: 'Nunito' , sans-serif;
+
+/* FONT WEIGHT */
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+/*FONT SIZE*/
+$font-size-s: 0.5625rem;
+$font-size-m: 0.75rem;
+$font-size-b: 0.9375rem;
+$font-size-l: 1.125rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 1.6875rem;
+
+/*LINE HEIGHT*/
+$line-height-s: 1.3;
+$line-height-m: 1.3;
+$line-height-b: 1.4;
+$line-height-l: 1.5;
+
+
+/*Font 1*/
+ .font-b-b, .font-b-s,.font-m-r, .font-m-ru, .font-m-m, .font-m-l, .font-s-ru, .font-s-l, .font-s-li {
+    font-family: $font-family;
+} 
+
+.font-b-b, .font-b-s{
+    font-size: $font-size-b;
+    line-height: $line-height-b;
+}
+
+.font-b-b {
+    font-weight: $font-weight-bold;
+}
+
+.font-b-s {
+    font-weight: $font-weight-semibold;
+}
+
+.font-b-mic {
+    font-family: $font-family-2;
+    font-weight: $font-weight-semibold;
+    font-style: italic;
+    font-size: $font-size-l;
+}
+
+.font-m-r, .font-m-ru, .font-m-m, .font-m-mu, .font-m-s, font-m-b, .font-m-bu, .font-m-l  {
+    font-size: $font-size-m;
+    line-height: $line-height-m;
+}
+
+.font-m-r {
+    line-height: $line-height-l;
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+}
+
+.font-m-ru {
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+}
+
+.font-m-m {
+    font-weight: $font-weight-medium;
+}
+
+.font-m-mu {
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+}
+
+.font-m-s {
+    font-weight: $font-weight-semibold;
+}
+
+.font-m-b {
+    font-weight: $font-weight-bold;
+}
+
+.font-m-bu {
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+}
+
+
+.font-m-l {
+    font-weight: $font-weight-light;
+}
+
+.font-s-ru, .font-s-m, .font-s-l, .font-s-li {
+    font-size: $font-size-s;
+}
+
+.font-s-ru {
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+}
+
+.font-s-m {
+    font-weight: $font-weight-medium;
+}
+
+.font-s-l {
+    font-weight: 300;
+}
+
+.font-s-li {
+    font-weight: 300;
+    font-style: italic;
+}
+
+/*FONT2*/
+
+.font2-b-bu, .font2-l-r, .font2-l-su, .font2-l-b, .font2-l-bu {
+    font-family: 'Nunito', sans-serif;
+}
+
+/*Big Sized*/
+.font2-b-bu {
+    font-size: $font-size-b;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+}
+
+/*Large Sized*/
+.font2-l-r, .font2-l-su, .font2-l-b, .font2-l-bu  {
+    font-size: $font-size-l;
+}
+
+
+.font2-l-r {
+    font-weight: $font-weight-regular;
+}
+
+
+.font2-l-bu {
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+}
+
+.font2-l-su {
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+}
+

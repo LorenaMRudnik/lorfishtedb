@@ -1,0 +1,61 @@
+$inputs-width: 15rem; 
+$labels-width: 6.25rem;
+
+.blast-main {
+    width: 100%;
+}
+
+.blast-form {
+    display: block;
+    margin: 0 auto;
+    margin-top: $margin-l;
+    width: max-content;
+}
+
+.blast-form label {
+    display: inline-block;
+    width: 100px;
+}
+
+#enterFasta-container label{
+    width: 100%;
+    margin-bottom: $margin-xs;
+}
+
+.blast-form textarea {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    height: 100px;
+    width: calc(#{$inputs-width} + #{$labels-width});
+}
+
+.blast-form select {
+    width: $inputs-width;
+}
+
+
+.blast-form button {
+    margin-top: $margin-b;
+}
+
+#enterFasta-container{
+    width: max-content;
+}
+
+#options-container {
+    margin-top: $margin-b;
+}
+
+#container-filter {
+    display: inline-block;
+}
+
+#container-expect, #container-alignments, #program-container {
+    margin-top: $margin-xs;
+}
+
+
+
+
+

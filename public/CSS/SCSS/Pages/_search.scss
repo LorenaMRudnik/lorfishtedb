@@ -1,0 +1,130 @@
+/**/
+
+.search-main {
+}
+
+.search-form{
+    background-color: $C01;
+    margin: 0 auto;
+}
+
+.search-main-container {
+    grid-template-columns: repeat(3, auto);
+    gap: $gap-b;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: $padding-s 5px;
+    background-color: transparent;
+    outline: 2px solid $C04;
+    width: max-content;
+    margin: $margin-b auto;
+    margin-bottom: $margin-m;
+    padding: $padding-s;
+    border-radius: $border-radius-rounded;
+    box-shadow: $box-shadow-s;
+}
+
+.search-main-container label{
+    color: $W01;
+}
+
+.search-main .button {
+    padding: $padding-s $padding-l;
+}
+
+.search-checkbox-container{
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    align-content: center;
+}
+
+.search-checkbox-container label {
+    margin-right: $margin-xs;
+}
+
+.search-radionbuttons-container {
+    grid-template-columns: auto auto auto;
+    background-color: $W01;
+    border-radius: $border-radius-rounded;
+    grid: $gap-l;
+    padding: $padding-s $padding-s;
+}
+
+.search-radionbuttons-container label {
+    padding-right: $padding-s;
+    color: $B01;
+}
+
+.search-radionbuttons-container input[type="radio"] {
+    margin: 0 $margin-xs;
+    display: inline-block;
+}
+
+.search-radionbuttons-container div {
+    grid-template-columns: repeat(3, auto);
+    align-content: center;
+    align-items: center;
+}
+
+/*TABLE*/
+table {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+}
+
+th {
+    font-size: $font-size-m;
+    border: none;
+    border-right: 1px solid white;
+}
+
+th:nth-last-child(1) {
+    
+
+}
+
+th:nth-child(1) {
+    border-right: 1px solid white;
+}
+
+
+
+td{
+    font-size: $font-size-s;
+    border: 1px solid $C02;
+}
+
+table th, table td {
+    padding-left: 3px;
+    padding-right: 12px;
+}
+
+.table-header, .table-row {
+    grid-template-columns: 140px repeat(7, minmax(90px, 1fr));
+    text-align: left;
+}
+
+.table-header {
+    background-color: $C02;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.specie-name {
+    font-style: italic;
+}
+
+
+
+.search-main-container label,  .search-main-container select, .search-radionbuttons-container label, .search-radionbuttons-container select {
+        font-size: $font-size-s;
+}
+
+.search-main-container .button {
+    // background-color: $W01;
+    // color: $C05;
+    box-shadow: $box-shadow-m;
+    font-size: $font-size-s;
+    padding: $padding-s $padding-b;
+}
