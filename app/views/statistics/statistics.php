@@ -1,9 +1,10 @@
 <?php
 
 use App\Infra\Database;
+use App\services\ApiServiceSearch;
 
-// Recupera dados para o dropdown de espécies de peixes
-$searchAll = Database::getInstance()->getSearchAll();
+// Recupera os dados para as opções do formulário
+$searchAll = ApiServiceSearch::getSearch('fish_name');;
 
 // Função para obter dados do gráfico com base na espécie selecionada
 function getChartData($name)

@@ -2,32 +2,27 @@
 
 use App\Infra\Database;
 use App\Routes\Router;
+use App\services\ApiServiceSearch;
 
 // Recupera os dados para as opções do formulário
-$searchAll = Database::getInstance()->getSearchAll();
-$superfamily = Database::getInstance()->getSuperfamily();
-$order = Database::getInstance()->getOrder();
-$class = Database::getInstance()->getClass();
+$searchAll = ApiServiceSearch::getSearch('fish_name');;
+$superfamily = ApiServiceSearch::getSearch('fish_superfamily');
+$order = ApiServiceSearch::getSearch('fish_order');
+$class = ApiServiceSearch::getSearch('fish_class');
 $results = [];
 
-// Verifica se o formulário foi enviado e aplica o filtro correspondente
-if (isset($_POST['search-radio'])) {
-    $filter = $_POST['search-radio']; // Identifica o filtro selecionado (class, order, superfamily)
-    $name_fish = $_POST['scientific_name_fish'];
-
-    if ($filter === 'class') {
-        $className = $_POST['class_name'];
-        $results = Database::getInstance()->createTable($name_fish, 'class', $className);
-    } elseif ($filter === 'order') {
-        $orderName = $_POST['order_name'];
-        $results = Database::getInstance()->createTable($name_fish, 'order', $orderName);
-    } elseif ($filter === 'superfamily') {
-        $superfamilyName = $_POST['superfamily_name'];
-        $results = Database::getInstance()->createTable($name_fish, 'superfamily', $superfamilyName);
-    } else {
-        echo "Nenhum filtro foi selecionado.";
-    }
+// Processa os dados do formulário
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search-radio'])) {
+    $filter = $_POST['search-radio']; // Identifica o filtro selecionado
+    $filtersData = [
+        'name_fish' => $_POST['scientific_name_fish'] ?? null,
+        'class_name' => $_POST['class_name'] ?? null,
+        'order_name' => $_POST['order_name'] ?? null,
+        'superfamily_name' => $_POST['superfamily_name'] ?? null,
+    ];
+    $results = ApiServiceSearch::filterResults($filter, $filtersData);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -79,9 +74,14 @@ if (isset($_POST['search-radio'])) {
                     <input type="checkbox" name="fish" id="fish">
                     <label class="font2-l-su color-c05" for="fish">Fish</label>
                     <select class="font2-l-r color-c05" name="scientific_name_fish">
+                        <?php
+                        if (empty($searchAll)) {
+                            echo '<option value="">No results found</option>';
+                        } else {   ?>;
                         <?php foreach ($searchAll as $s): ?>
                             <option value="<?= htmlspecialchars($s['scientific_name_fish']) ?>"><?= htmlspecialchars($s['scientific_name_fish']) ?></option>
-                        <?php endforeach; ?>
+                    <?php endforeach;
+                        } ?>
                     </select>
                 </div>
 
@@ -90,9 +90,14 @@ if (isset($_POST['search-radio'])) {
                         <input type="radio" name="search-radio" value="class" id="class">
                         <label class="font2-l-su color-c05" for="class">Class</label>
                         <select class="font2-l-r color-c05" name="class_name">
+                            <?php
+                            if (empty($searchAll)) {
+                                echo '<option value="">No results found</option>';
+                            } else {   ?>;
                             <?php foreach ($class as $c): ?>
                                 <option value="<?= htmlspecialchars($c['class_name']) ?>"><?= htmlspecialchars($c['class_name']) ?></option>
-                            <?php endforeach; ?>
+                        <?php endforeach;
+                            } ?>
                         </select>
                     </div>
 
@@ -100,9 +105,14 @@ if (isset($_POST['search-radio'])) {
                         <input type="radio" name="search-radio" value="order" id="order">
                         <label class="font2-l-su color-c05" for="order">Order</label>
                         <select class="font2-l-r color-c05" name="order_name">
+                            <?php
+                            if (empty($searchAll)) {
+                                echo '<option value="">No results found</option>';
+                            } else {   ?>;
                             <?php foreach ($order as $o): ?>
                                 <option value="<?= htmlspecialchars($o['order_name']) ?>"><?= htmlspecialchars($o['order_name']) ?></option>
-                            <?php endforeach; ?>
+                        <?php endforeach;
+                            } ?>
                         </select>
                     </div>
 
@@ -110,9 +120,14 @@ if (isset($_POST['search-radio'])) {
                         <input type="radio" name="search-radio" value="superfamily" id="superfamily">
                         <label class="font2-l-su color-c05" for="superfamily">Superfamily</label>
                         <select class="font2-l-r color-c05" name="superfamily_name">
+                            <?php
+                            if (empty($searchAll)) {
+                                echo '<option value="">No results found</option>';
+                            } else {   ?>;
                             <?php foreach ($superfamily as $sf): ?>
                                 <option value="<?= htmlspecialchars($sf['superfamily_name']) ?>"><?= htmlspecialchars($sf['superfamily_name']) ?></option>
-                            <?php endforeach; ?>
+                        <?php endforeach;
+                            } ?>
                         </select>
                     </div>
                 </div>

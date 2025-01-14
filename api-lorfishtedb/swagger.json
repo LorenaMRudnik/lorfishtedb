@@ -1,0 +1,35 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Minha API",
+      "description": "API para demonstrar integração com Swagger",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000/api",
+        "description": "Servidor local"
+      }
+    ],
+    "paths": {
+      "/": {
+        "get": {
+          "summary": "Exibe mensagem de boas-vindas",
+          "responses": {
+            "200": {
+              "description": "Mensagem de boas-vindas",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "message": "Bem-vindo à API!"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  
