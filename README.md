@@ -5,7 +5,7 @@
 LORFISHTEDB é um banco de dados especializado em elementos transponíveis (TEs) de genomas de peixes. O projeto integra dados de diferentes fontes, utiliza ferramentas de anotação e análise bioinformática, e disponibiliza os resultados em uma interface acessível.
 
 ## 📜 Fluxograma do Processo  
-![Fluxograma do LORFISHTEDB](Flowchart.jpg)  
+![Fluxograma do LORFISHTEDB](Flowchart (3).jpg)  
 
 ## 📂 Estrutura do Projeto  
 
